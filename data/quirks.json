@@ -1,16 +1,40 @@
 {
   "items": [
     {
+      "id": "niemblink",
+      "type": "neologism",
+      "term": "niemblink",
+      "definition": "vonkie van niks af wat tog skyn"
+    },
+    {
       "id": "skaduskeur",
       "type": "neologism",
       "term": "skaduskeur",
       "definition": "donker skeur van herinneringe"
     },
     {
-      "id": "niemblink",
+      "id": "ligsweer",
       "type": "neologism",
-      "term": "niemblink",
-      "definition": "vonkie van niks af wat tog skyn"
+      "term": "ligsweer",
+      "definition": "glans wat oor wonde groei"
+    },
+    {
+      "id": "hartwind",
+      "type": "neologism",
+      "term": "hartwind",
+      "definition": "fluistering van ’n ou liefdesnaam"
+    },
+    {
+      "id": "stilvlam",
+      "type": "neologism",
+      "term": "stilvlam",
+      "definition": "warmte wat nie brand nie"
+    },
+    {
+      "id": "niemfamilie",
+      "type": "familie",
+      "term": "Niem-familie",
+      "definition": "’n spel met niks en alles — Niemblink, Niemdroom, Niemlag"
     }
   ]
 }

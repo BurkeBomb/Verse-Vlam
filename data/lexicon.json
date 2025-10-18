@@ -9,23 +9,268 @@
       "synonyms": {
         "af": [
           "liefde",
-          "minne"
+          "minne",
+          "toegenegenheid"
         ]
       },
       "imagery": {
         "af": [
           "lig soos handpalms",
-          "hartklop oor die drempel"
+          "hartklop oor die drempel",
+          "jou naam as môredou"
         ]
       },
       "expressions": {
         "af": [
-          "Asem tussen woorde",
-          "Ek en jy teen die maan"
+          "ek en jy teen die maan",
+          "jy in my asemhalings"
         ]
       },
       "tags": [
         "romanties"
+      ]
+    },
+    {
+      "id": "verlange",
+      "title": {
+        "af": "Verlange"
+      },
+      "color": "#7aa2f7",
+      "synonyms": {
+        "af": [
+          "smagting",
+          "heimwee"
+        ]
+      },
+      "imagery": {
+        "af": [
+          "treinspoor in my bors",
+          "lugspoor waar jy geloop het"
+        ]
+      },
+      "expressions": {
+        "af": [
+          "ek tel die dae op my handpalm"
+        ]
+      },
+      "tags": [
+        "melankolies"
+      ]
+    },
+    {
+      "id": "vreugde",
+      "title": {
+        "af": "Vreugde"
+      },
+      "color": "#FFCC66",
+      "synonyms": {
+        "af": [
+          "blydskap",
+          "vreug"
+        ]
+      },
+      "imagery": {
+        "af": [
+          "son op die stoep",
+          "lag wat oorborrel"
+        ]
+      },
+      "expressions": {
+        "af": [
+          "ek dans in my skaduwee"
+        ]
+      },
+      "tags": [
+        "lig"
+      ]
+    },
+    {
+      "id": "woede",
+      "title": {
+        "af": "Woede"
+      },
+      "color": "#ff6b6b",
+      "synonyms": {
+        "af": [
+          "gram",
+          "toorn"
+        ]
+      },
+      "imagery": {
+        "af": [
+          "klip in die keel",
+          "vlam agter die tande"
+        ]
+      },
+      "expressions": {
+        "af": [
+          "my woorde skuur soos vuur"
+        ]
+      },
+      "tags": [
+        "intens"
+      ]
+    },
+    {
+      "id": "rustigheid",
+      "title": {
+        "af": "Rustigheid"
+      },
+      "color": "#4EE0C1",
+      "synonyms": {
+        "af": [
+          "kalmte",
+          "bedaring"
+        ]
+      },
+      "imagery": {
+        "af": [
+          "water teen ’n rots",
+          "tee wat stadig trek"
+        ]
+      },
+      "expressions": {
+        "af": [
+          "alles word stil soos aand"
+        ]
+      },
+      "tags": [
+        "stil"
+      ]
+    },
+    {
+      "id": "jaloesie",
+      "title": {
+        "af": "Jaloesie"
+      },
+      "color": "#ff9f1c",
+      "synonyms": {
+        "af": [
+          "afguns",
+          "nijd"
+        ]
+      },
+      "imagery": {
+        "af": [
+          "suurwyn in die bors",
+          "skadu oor ’n glimlag"
+        ]
+      },
+      "expressions": {
+        "af": [
+          "ek glimlag met ’n skerp rand"
+        ]
+      },
+      "tags": [
+        "intens"
+      ]
+    },
+    {
+      "id": "verwondering",
+      "title": {
+        "af": "Verwondering"
+      },
+      "color": "#5be7a9",
+      "synonyms": {
+        "af": [
+          "betowering",
+          "verbasing"
+        ]
+      },
+      "imagery": {
+        "af": [
+          "ooggrootte soos ’n maan",
+          "vingers op die glas van die wêreld"
+        ]
+      },
+      "expressions": {
+        "af": [
+          "ek hou my asem vas"
+        ]
+      },
+      "tags": [
+        "lig"
+      ]
+    },
+    {
+      "id": "trots",
+      "title": {
+        "af": "Trotse vreugde"
+      },
+      "color": "#e0aaff",
+      "synonyms": {
+        "af": [
+          "eer",
+          "selfrespek"
+        ]
+      },
+      "imagery": {
+        "af": [
+          "reguit rugstring",
+          "son op ’n vlag"
+        ]
+      },
+      "expressions": {
+        "af": [
+          "my naam staan ferm"
+        ]
+      },
+      "tags": [
+        "krag"
+      ]
+    },
+    {
+      "id": "berusting",
+      "title": {
+        "af": "Berusting"
+      },
+      "color": "#a0aec0",
+      "synonyms": {
+        "af": [
+          "aanvaarding",
+          "vrede"
+        ]
+      },
+      "imagery": {
+        "af": [
+          "blaar wat val sonder geraas",
+          "gety wat draai"
+        ]
+      },
+      "expressions": {
+        "af": [
+          "ek sit sag neer"
+        ]
+      },
+      "tags": [
+        "stil"
+      ]
+    },
+    {
+      "id": "skuld",
+      "title": {
+        "af": "Skuld"
+      },
+      "color": "#ef476f",
+      "synonyms": {
+        "af": [
+          "berou",
+          "spyt"
+        ]
+      },
+      "imagery": {
+        "af": [
+          "swaar sleutels in die sak",
+          "voetspore terug"
+        ]
+      },
+      "expressions": {
+        "af": [
+          "ek praat stadig met more"
+        ]
+      },
+      "tags": [
+        "introspeksie"
       ]
     }
   ]

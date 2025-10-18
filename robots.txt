@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://burkebomb.github.io/sitemap.xml

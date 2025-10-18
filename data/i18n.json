@@ -1,0 +1,38 @@
+{
+  "af": {
+    "title": "Verse & Vlam",
+    "welcome": "Lig in woorde, vlam in stilte.",
+    "compendium": "Kompendium",
+    "gallery": "Galery",
+    "testai": "Toets AI (plaaslik)",
+    "about": "Oor",
+    "themes": "Temas",
+    "neon": "Neon Mist",
+    "graf": "Graffiti",
+    "eth": "Ethereal Gold",
+    "ink": "Ink & Ash",
+    "footer": "’n Afr Theosorus projek",
+    "back": "← Terug",
+    "print": "Druk / PDF",
+    "share": "Deel via URL",
+    "empty": "Geen items nie. Begin by die hoofblad of laai met ?set=…"
+  },
+  "en": {
+    "title": "Verse & Vlam",
+    "welcome": "Light in words, flame in silence.",
+    "compendium": "Compendium",
+    "gallery": "Gallery",
+    "testai": "Test AI (local)",
+    "about": "About",
+    "themes": "Themes",
+    "neon": "Neon Mist",
+    "graf": "Graffiti",
+    "eth": "Ethereal Gold",
+    "ink": "Ink & Ash",
+    "footer": "An Afr Theosorus project",
+    "back": "← Back",
+    "print": "Print / PDF",
+    "share": "Share via URL",
+    "empty": "No items yet. Start on the home page or load with ?set=…"
+  }
+}
