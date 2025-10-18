@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="af">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kompendium — Static</title>
+<link rel="stylesheet" href="assets/styles.css"><link rel="stylesheet" href="assets/print.css" media="print">
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js"></script>
+</head>
+<body>
+<header class="header">
+  <div class="brand"><h1>📘 Kompendium</h1></div>
+  <div class="row">
+    <a class="chip" href="index.html">← Terug</a>
+    <button class="btn" onclick="window.print()">Druk / Stoor PDF</button>
+    <button class="btn" id="btnShare">Deel via URL</button>
+    <button class="btn" id="btnClear">Maak leeg</button>
+  </div>
+</header>
+<main class="container" id="root"></main>
+<script>
+const $=(s,r=document)=>r.querySelector(s);
+function md(s){ try{ return DOMPurify.sanitize(marked.parse(s||'')); }catch(e){ return s||''; } }
+function getList(){
+  const p = new URLSearchParams(location.search);
+  if(p.get('set')){ try{ return JSON.parse(atob(p.get('set')))||[] }catch(e){ return [] } }
+  return JSON.parse(localStorage.getItem('afr-booklet')||'[]');
+}
+function setList(a){ localStorage.setItem('afr-booklet', JSON.stringify(a)); }
+async function build(){
+  const root=$('#root'); root.innerHTML='';
+  const list=getList();
+  if(!list.length){ root.innerHTML='<div class="card">Geen items nie. Voeg by via die hoofblad of laai met ?set=…</div>'; return; }
+  const [lex,quirks]=await Promise.all([fetch('data/lexicon.json').then(r=>r.json()), fetch('data/quirks.json').then(r=>r.json())]);
+  const entries=[];
+  list.forEach(k=>{
+    const [type,id]=k.split(':');
+    if(type==='emotion'){ const e=(lex.emotions||[]).find(x=>x.id===id); if(e){ entries.push({title:e.title?.af||id, color:e.color, tags:e.tags||[], syn:(e.synonyms?.af||[]), img:(e.imagery?.af||[]), exp:(e.expressions?.af||[])});} }
+    if(type==='quirk'){ const q=(quirks.items||[]).find(x=>x.id===id); if(q){ entries.push({title:q.term, color:null, tags:[], syn:[], img:[q.definition||''], exp:[]}); } }
+  });
+  const cover=document.createElement('section'); cover.className='card'; cover.innerHTML='<h2>Kompendium</h2><div class="meta">Statiese modus</div>'; root.appendChild(cover);
+  entries.forEach(e=>{
+    const sec=document.createElement('section'); sec.className='card';
+    sec.innerHTML = `<h3>${e.color?'<span class="color-dot" style="background:'+e.color+'"></span>':''}${e.title}</h3>`
+      + (e.tags?.length?('<p>'+e.tags.map(t=>'<span class="chip">#'+t+'</span>').join(' ')+'</p>'):'')
+      + (e.syn?.length?('<div><strong>Sinonieme</strong><br/>'+e.syn.join(', ')+'</div>'):'')
+      + (e.img?.length?('<div><strong>Beeldspraak</strong><div>'+md(e.img.join('\n'))+'</div></div>'):'')
+      + (e.exp?.length?('<div><strong>Voorbeelde</strong><div>'+md(e.exp.join('\n'))+'</div></div>'):'')
+    ;
+    root.appendChild(sec);
+  });
+}
+function shareURL(){
+  const arr = getList(); if(!arr.length){ alert('Geen items'); return;}
+  const b64 = btoa(JSON.stringify(arr));
+  const u = new URL(location.href); u.search = ''; u.searchParams.set('set', b64);
+  navigator.clipboard.writeText(u.toString()).then(()=>alert('Skakel gekopieer')).catch(()=>prompt('Kopieer:', u.toString()));
+}
+document.getElementById('btnShare').onclick = shareURL;
+document.getElementById('btnClear').onclick = ()=>{ localStorage.removeItem('afr-booklet'); location.reload(); };
+document.addEventListener('DOMContentLoaded', build);
+</script>
+</body>
+</html>

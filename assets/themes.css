@@ -1,0 +1,4 @@
+:root[data-theme="modern"]{ --accent:#4EE0C1; --accent2:#C77DFF }
+:root[data-theme="graffiti"]{ --accent:#ff4d6d; --accent2:#19e3ff }
+:root[data-theme="ethereal"]{ --accent:#FFCC66; --accent2:#FFDCA8 }
+:root[data-theme="inkash"]{ --accent:#7aa2f7; --accent2:#a0aec0 }

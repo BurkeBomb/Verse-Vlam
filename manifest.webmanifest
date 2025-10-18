@@ -1,0 +1,26 @@
+{
+  "name": "Verse & Vlam \u2014 Static",
+  "short_name": "Verse & Vlam",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "theme_color": "#4EE0C1",
+  "background_color": "#0a0c10",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/icons/icon_192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon_256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon_512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

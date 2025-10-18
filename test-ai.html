@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="af">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Toets — Static</title><link rel="stylesheet" href="assets/styles.css"></head>
+<body>
+<main class="container">
+  <section class="card">
+    <h2>AI Toets (Staties)</h2>
+    <p>GitHub Pages het geen backend nie, so hierdie blad gebruik ’n <em>plaaslike</em> generator vir inspirasie.</p>
+    <div class="row"><input id="emo" placeholder="Tema (bv. liefde)" style="flex:1;padding:10px;border-radius:10px;border:1px solid var(--line);background:#0e131b;color:var(--ink)"><button class="btn" id="go">Genereer</button></div>
+  </section>
+  <section class="card"><div class="meta">Uitset</div><pre id="out" style="white-space:pre-wrap"></pre></section>
+</main>
+<script>
+const LINES = { liefde:['lig soos handpalms','asem tussen woorde','ek en jy teen die maan'], verlange:['treinspoor in my bors','môredou op jou naam','wolke wat wag'], vreugde:['son op die stoep','lag wat oorborrel','klip wat sing'] };
+function mock(emo){ emo=(emo||'liefde').toLowerCase(); const pool = LINES[emo] || LINES['liefde']; const pick=()=> pool[Math.floor(Math.random()*pool.length)]; return [pick(),pick(),pick()].join('\n'); }
+document.getElementById('go').onclick = ()=>{ const emo=document.getElementById('emo').value||'liefde'; document.getElementById('out').textContent = mock(emo); };
+</script>
+</body></html>

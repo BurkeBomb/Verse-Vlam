@@ -1,0 +1,32 @@
+{
+  "emotions": [
+    {
+      "id": "liefde",
+      "title": {
+        "af": "Liefde"
+      },
+      "color": "#ff4d6d",
+      "synonyms": {
+        "af": [
+          "liefde",
+          "minne"
+        ]
+      },
+      "imagery": {
+        "af": [
+          "lig soos handpalms",
+          "hartklop oor die drempel"
+        ]
+      },
+      "expressions": {
+        "af": [
+          "Asem tussen woorde",
+          "Ek en jy teen die maan"
+        ]
+      },
+      "tags": [
+        "romanties"
+      ]
+    }
+  ]
+}
