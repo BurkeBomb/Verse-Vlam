@@ -1,0 +1,91 @@
+{
+  "ci": {
+    "collect": {
+      "numberOfRuns": 3,
+      "startServerCommand": "node server.js",
+      "url": [
+        "http://localhost:5173/index.html",
+        "http://localhost:5173/play.html",
+        "http://localhost:5173/booklet.html",
+        "http://localhost:5173/challenges.html",
+        "http://localhost:5173/gallery.html"
+      ],
+      "settings": {
+        "preset": "mobile",
+        "onlyCategories": [
+          "performance",
+          "accessibility",
+          "best-practices",
+          "seo",
+          "pwa"
+        ],
+        "budgets": [
+          "./lighthouse-budget.json"
+        ]
+      }
+    },
+    "assert": {
+      "assertions": {
+        "categories:performance": [
+          "error",
+          {
+            "minScore": 0.9
+          }
+        ],
+        "categories:accessibility": [
+          "warn",
+          {
+            "minScore": 0.9
+          }
+        ],
+        "categories:best-practices": [
+          "warn",
+          {
+            "minScore": 0.9
+          }
+        ],
+        "categories:seo": [
+          "warn",
+          {
+            "minScore": 0.9
+          }
+        ],
+        "categories:pwa": [
+          "warn",
+          {
+            "minScore": 0.9
+          }
+        ],
+        "speed-index": [
+          "warn",
+          {
+            "maxNumericValue": 3000
+          }
+        ],
+        "largest-contentful-paint": [
+          "warn",
+          {
+            "maxNumericValue": 3000
+          }
+        ],
+        "total-blocking-time": [
+          "warn",
+          {
+            "maxNumericValue": 200
+          }
+        ],
+        "cumulative-layout-shift": [
+          "warn",
+          {
+            "maxNumericValue": 0.1
+          }
+        ]
+      }
+    },
+    "upload": {
+      "target": "filesystem",
+      "outputDir": "./reports/lhci",
+      "reportFilenamePattern": "%%PATHNAME%%-%%DATETIME%%-report.%%EXTENSION%%"
+    }
+  }
+}
